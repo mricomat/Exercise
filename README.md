@@ -2,6 +2,8 @@
 
 Este repositorio contiene del ejercicio de la prueba Cliente del proceso de Selección con Sopra Steria.
 
+He optado por escoger un diseño básico en el que se puede comprobar el total de dicha transacción, contando el cálculo de la comisión. Como aspecto adicional, he añadido un campo más en las transacciones representando el campo de del resultado final en una cuenta de ahorros, variando así en cada transacción.
+
 Para la prueba he optado por escoger el patrón de diseño MVP, el cual he optado por elegirlo dado que es uno de los mejores patrones de diseño que nos ahorra mucho tiempo de mantenimiento y testeo, además de una separación clara de las responsabilidades entre componentes, dejando así un código más claro.
 
 Parto de un MainActivity del cual controlo el lanzamiento del Fragment de la única y pantalla principal de Transacciones.  
