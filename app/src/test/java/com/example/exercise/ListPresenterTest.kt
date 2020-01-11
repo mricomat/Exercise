@@ -1,8 +1,6 @@
 package com.example.exercise
 
 import com.example.exercise.data.AppDataManager
-import com.example.exercise.data.model.TransactionModel
-import com.example.exercise.data.network.OnResultCallback
 import com.example.exercise.ui.list.ListPresenterImpl
 import com.example.exercise.ui.list.ListView
 import com.nhaarman.mockitokotlin2.any
@@ -19,7 +17,6 @@ import org.mockito.MockitoAnnotations
 @RunWith(JUnit4::class)
 class ListPresenterTest {
 
-
     lateinit var listPresenterImpl: ListPresenterImpl<ListView>
 
     @Mock
@@ -27,9 +24,6 @@ class ListPresenterTest {
 
     @Mock
     lateinit var appDataManager: AppDataManager
-
-    @Mock
-    lateinit var callback: OnResultCallback<ArrayList<TransactionModel>>
 
     @Before
     fun setUp() {

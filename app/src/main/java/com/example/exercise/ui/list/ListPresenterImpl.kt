@@ -3,8 +3,8 @@ package com.example.exercise.ui.list
 import android.os.Build
 import android.util.Log
 import com.example.exercise.data.AppDataManager
-import com.example.exercise.data.network.OnResultCallback
 import com.example.exercise.data.model.TransactionModel
+import com.example.exercise.data.network.OnResultCallback
 import com.example.exercise.ui.base.BasePresenterImpl
 import java.time.format.DateTimeFormatter
 import java.time.format.DateTimeParseException
@@ -24,11 +24,11 @@ class ListPresenterImpl<V : ListView>(private var mDataManager: AppDataManager =
     private val DATE_FORMAT = "EEE, d MMM yyyy HH:mm"
 
     private var mAccountAmountMock: Double = 2453.20
-    //private var mDataManager: AppDataManager = AppDataManager()
     private var mTransactionsList: ArrayList<TransactionModel> = ArrayList()
 
-    /** Once the view is attached to the presenter, we can call to the service **/
-
+    /**
+     * Once the view is attached to the presenter, we can call to the service
+     */
     override fun onAttach(view: V) {
         super.onAttach(view)
         loadTransactions()
@@ -56,8 +56,9 @@ class ListPresenterImpl<V : ListView>(private var mDataManager: AppDataManager =
         }
     }
 
-    /** Method to sort, filter the transactions and format some fields of them **/
-
+    /**
+     *  Method to sort, filter the transactions and format some fields of them
+     */
     fun formatTransactions(transactionsList: ArrayList<TransactionModel>): ArrayList<TransactionModel> {
         val formattedTransactionList: ArrayList<TransactionModel> = ArrayList()
         transactionsList.sortByDescending { it.date }
@@ -80,8 +81,9 @@ class ListPresenterImpl<V : ListView>(private var mDataManager: AppDataManager =
         return formattedTransactionList
     }
 
-    /** Checks from the format of the given service if the value follows that one **/
-
+    /**
+     *  Checks from the format of the given service if the value follows that one
+     */
     private fun isCorrectDateFormat(value: String): Boolean {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             try {
@@ -102,8 +104,9 @@ class ListPresenterImpl<V : ListView>(private var mDataManager: AppDataManager =
         }
     }
 
-    /** Format to the new format to make it more easy to read **/
-
+    /**
+     * Format to the new format to make it more easy to read
+     */
     private fun formatDate(value: String): String {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             return return try {
