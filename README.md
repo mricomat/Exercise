@@ -21,7 +21,6 @@ Como mejora de dicha arquitectura elegida, hubiera sido recomendable utilizar la
 # Arquitecture
 ![esquema](https://user-images.githubusercontent.com/35971408/72203324-9a696e80-346a-11ea-9189-d925ecd76cfd.png)
 
-(It's using the java structure in this img, I will change it soon)
 # Project Structure
 <img src = "https://user-images.githubusercontent.com/35971408/72178914-3f8d3400-33e4-11ea-8c19-5bd32eef968b.png">
 <br>
